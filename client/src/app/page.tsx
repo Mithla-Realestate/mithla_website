@@ -1,10 +1,12 @@
-import Image from "next/image";
+import Image from "../../public/image/big-city.jpg"
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800">
+      <Navbar />
       {/* Hero Section */}
-      <section className="bg-[url('/public/globe.svg')] bg-cover bg-center py-20 px-6 text-center">
+      <section style={{ backgroundImage: "url('/image/big-city.jpg')" }} className="relative bg-cover bg-center py-20 px-6 text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
           Find Your Dream Property in Pan India
         </h1>
@@ -26,7 +28,7 @@ export default function Home() {
               className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105"
             >
               <img
-                src={`https://source.unsplash.com/featured/?house,realestate,${id}`}
+                src={`/image/${id}.jpg`}
                 alt="Property"
                 className="h-48 w-full object-cover"
               />
